@@ -2,12 +2,7 @@
   <main>
     <dinoHeader/>
       <div class="main">
-        <section id="profiles-container">
-          <h2>Profiles</h2>
-          <ul id="profiles">
-          <profiles v-for="dino in dinos" :key="dino.id" :dino='dino'/>
-          </ul>
-        </section>
+        <profiles/>
       </div>
     <dinoFooter/>
   </main>
@@ -26,22 +21,26 @@ export default {
     },
   data(){
     return {
-      dinos: [],
-      id: 0
     }
   },
-  mounted(){
-    fetch('../static/dinosaurs.json')
-    .then(result => result.json())
-    .then(results => {
-      for (const obj of results) {
-        obj.id = this.id
-        obj.show = false
-        this.id++
-        this.dinos.push(obj)
-      }
-    })
-  }
+  // mounted(){
+  //   fetch('../static/dinosaurs.json')
+  //   .then(result => result.json())
+  //   .then(results => {
+  //     for (const obj of results) {
+  //       obj.id = this.id
+  //       obj.show = false
+  //       this.id++
+  //       this.dinos.push(obj)
+  //     }
+  //   })
+  // },
+  // methods: {
+  //   shouldShow (dino) {
+  //     console.log('hello')
+  //     dino.show = !dino.show
+  //   }
+  // }
 };
 </script>
 

@@ -1,5 +1,5 @@
 <template>
-    <section class="skills-container" id='hidden'>
+    <section class="skills-container">
         <h4>Skills</h4>
         <ul class="skills-list">
             <li v-for="skill in skills" :key="skill">{{ skill }}</li>
@@ -14,12 +14,6 @@ export default {
     data(){
         return {
             
-        }
-    },
-    methods: {
-        toggle: function () {
-            document.querySelector('#hidden')
-            return 
         }
     }
 }
